@@ -10,14 +10,19 @@ pipeline {
     }
 
     environment {
-        DOCKER_CREDENTIAL_ID = 'dockerhub'
+        DOCKER_CREDENTIAL_ID = 'docker-aliyun'
         GITHUB_CREDENTIAL_ID = 'github-id'
         KUBECONFIG_CREDENTIAL_ID = 'demo-kubeconfig'
-        REGISTRY = 'docker.io'
-        DOCKERHUB_NAMESPACE = 'zr8888'
-        GITHUB_ACCOUNT = 'yuanzhang788'
+        DOCKER_REGISTRY = 'registry.cn-hangzhou.aliyuncs.com'
+        GITHUB_ACCOUNT = '66qingcun'
         APP_NAME = 'devops-java-sample'
-        SONAR_CREDENTIAL_ID = 'sonar-qube'
+        SONAR_CREDENTIAL_ID = 'sonar-token'
+        //Docker仓库命名空间
+        DOCKER_NAMESPACE = 'gulimall_xrl'
+        //K8S配置凭证ID
+        K8S_CONFIG_CREDENTIAL_ID = 'demo-kubeconfig'
+        //K8S部署命名空间（对应Kubesphere项目）
+        K8S_NAMESPACE = 'gulimall-devops'
     }
 
     stages {
